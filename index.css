@@ -17,14 +17,13 @@
 /* Estilos para el texto de introducción */
 .Intro {
   position: absolute;
-  top: 45%;
-  /* Posición vertical centrada */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  z-index: 1; /* Asegura que el texto esté sobre el video */
+  color: #fff;
 }
-
 /* Estilos para el título */
 .title {
   font-size: 3em;
@@ -57,13 +56,18 @@
   padding: 0;
   margin: 0;
 }
+.section2{
+  position: relative;
+  display: grid;
+  text-align: center;
+  margin: 5%;
+}
 
 /* Imagen de fondo con ajustes de posición */
 .fondo_video1 {
   width: 100%;
   position: relative;
   overflow-x: 6;
-  bottom: 17em;
   /* Ajustar posición vertical */
 }
 
@@ -103,44 +107,28 @@ a {
 
 /* Estilos para el segundo logotipo */
 .logo2 {
-  width: 10em;
-  height: 10;
+  width: 18%;
+  height: auto; /* Ajusta la altura automáticamente */
+  position: absolute;
+  top:  40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Asegura que el logo esté sobre el fondo */
 }
 
-/* Contenedor del segundo logotipo */
 .div-logo2 {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 33em;
-  /* Ajustar posición vertical */
-  z-index: 5;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* Asegura que el div-logo2 esté sobre el video */
 }
 
-/* Consultas de medios para ajustar estilos en diferentes tamaños de pantalla */
-@media screen and (max-width: 950px) and (min-width: 780px) {
-
-  /* Estilos para pantalla entre 950px y 780px */
-  .fondo_video1 {
-    position: relative;
-    bottom: 15em;
-    /* Ajustar posición vertical */
-  }
-
-  /* Estilos para el segundo logotipo en tamaño de pantalla específico */
-  .logo2 {
-    width: 10em;
-    height: 10;
-  }
-
-  /* Estilos para el contenedor del segundo logotipo en tamaño de pantalla específico */
-  .div-logo2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 23.5em;
-    z-index: 5;
-  }
+.fondo_video1 {
+  width: 100%;
+  max-width: 100vw;
+  display: block;
 }
 
 
@@ -266,28 +254,6 @@ footer {
 
 
 
-/* Otras consultas de medios para tamaños de pantalla específicos... */
-
-
-@media screen and (max-width: 950px) and (min-width: 780px) {
-  .fondo_video1 {
-    position: relative;
-    bottom: 15em;
-  }
-
-  .logo2 {
-    width: 10em;
-    height: 10;
-  }
-
-  .div-logo2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 23.5em;
-    z-index: 5;
-  }
-}
 
 
 .Textlofo {
@@ -336,8 +302,7 @@ footer {
   justify-items: center;
   grid-template-columns: repeat(2, minmax(10em, 1fr));
   grid-gap: 1em;
-  position: relative;
-  bottom: 25em;
+  
 }
 
 .modulos>div {
@@ -366,6 +331,7 @@ footer {
   width: 10;
   height: 10em;
   padding: 0em;
+  width: 18em;
 
   background-color: rgb(31, 31, 31);
   border: 2px solid #000;
@@ -373,7 +339,7 @@ footer {
 }
 
 .submodulo>div {
-  margin: 0em;
+  margin: .2em;
   padding: 0em;
   height: 10em;
   width: 19em;
@@ -439,91 +405,3 @@ footer {
 
 
 
-
-
-@media screen and (max-width: 780px) and (min-width: 540px) {
-  .fondo_video1 {
-    position: relative;
-    bottom: 13em;
-  }
-
-  .logo2 {
-    width: 8em;
-    height: 8;
-  }
-
-  .div-logo2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 20em;
-    z-index: 5;
-  }
-
-}
-
-@media screen and (max-width: 540px) and (min-width: 362px) {
-  .fondo_video1 {
-    position: relative;
-    bottom: 11em;
-  }
-
-  .logo2 {
-    width: 6em;
-    height: 6;
-  }
-
-  .div-logo2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 15em;
-    z-index: 5;
-  }
-
-
-}
-
-@media screen and (max-width: 361px) and (min-width: 240px) {
-  .fondo_video1 {
-    position: relative;
-    bottom: 10em;
-  }
-
-  .logo2 {
-    width: 6em;
-    height: 6;
-  }
-
-  .div-logo2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 13em;
-    z-index: 5;
-  }
-
-
-}
-
-@media screen and (max-width: 240px) and (min-width: 100px) {
-  .fondo_video1 {
-    position: relative;
-    bottom: 9em;
-  }
-
-  .logo2 {
-    width: 6em;
-    height: 6;
-  }
-
-  .div-logo2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 11em;
-    z-index: 5;
-  }
-
-
-}
